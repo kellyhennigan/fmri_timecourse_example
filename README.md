@@ -14,7 +14,7 @@ These matlab scripts provide an example of how to save out & then plot ROI timec
 * [matlab package, VISTASOFT](https://github.com/vistalab/vistasoft) (their niftiRead() function for loading nifti data is required)
 
 
-## Pipeline (#pipeline)
+## Pipeline 
 
 In matlab, run:
 ```
