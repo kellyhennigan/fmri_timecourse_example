@@ -1,0 +1,77 @@
+function colors=getTCPlotColors(stims)
+% -------------------------------------------------------------------------
+% usage: use this to define your desired plotting colors. This is useful so
+% that lines for a given condition are always plotted in the color you
+% choos
+%
+% INPUT:
+%   stims - cell array of stim names (e.g., {'gain5','gain0'}
+%
+% OUTPUT:
+%   colors - rgb values to use for plotting timecourses
+%
+%
+% author: Kelly, kelhennigan@gmail.com, 12-Dec-2019
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%% determine which colors to return based on input labels %%%%%%%%%%%%%
+
+
+colors = [];
+
+     strongwant_color = [2 117 180]./255;     % blue
+        somewhatwant_color = [42 160 120]./255;  % green
+        somewhatdontwant_color =  [253 158 33]./255;      % orange
+        strongdontwant_color =  [219 79 106]./255;       % pink
+   
+for i=1:numel(stims)
+    
+    
+    switch lower(stims{i})
+
+        % add/edit as desired!!!
+        
+        case {'gain5','gain5-gain0'}
+            colors(i,:)=  [219 79 106]./255;       % pink
+            
+        case 'gain1'
+            colors(i,:)=[129,15,124]./255; % purp
+            
+        case 'gain0'
+            colors(i,:)= [2 117 180]./255;     % blue
+            
+        case {'loss5','loss5-loss0'}
+            colors(i,:)=  [253 158 33]./255;      % orange
+            
+        case 'loss1'
+            colors(i,:)=
+            
+        case 'loss0'
+            colors(i,:)=[42 160 120]./255;  % green
+            
+        case {'gainwin','gainwin-gainmiss'}
+            colors(i,:)= [219 79 106]./255; % pink
+            
+        case 'gainmiss'
+            colors(i,:)=[2 117 180]./255; % blue
+            
+        case {'losswin','losswin-lossmiss','losshit'}
+            colors(i,:)=[253 158 33]./255; % orange
+            
+        case 'lossmiss'
+             colors(i,:)= [42 160 120]./255;  % green
+            
+    end
+   
+    
+    
+65,182,196
+29,145,192
+34,94,168
+12,44,132
+    
+end
+
